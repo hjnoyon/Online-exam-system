@@ -11,3 +11,13 @@ body{
 	font-family: FontAwesome;
 	src: url('../fonts/fontawesome-webfont.ttf');
 }
+
+/*label link for login page forgot password*/
+.forgot-pass-label{
+	display: block;
+	width: 100%;
+}
+.label-link{
+	float: right;
+	font-size: 12px;
+}
