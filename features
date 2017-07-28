@@ -1,0 +1,17 @@
+1. Homepage
+		i. list of exams
+		ii. upcoming events
+
+2. Users
+		i. Teacher can login & register
+		ii. Student can login & register
+		iii. Teacher can set exam question
+		iv. Student can take exams & view results
+
+3. Settings
+		i. change user info
+		ii. change password
+
+4. Contact page
+5. Super admin
+		i. Basically a crud system.
