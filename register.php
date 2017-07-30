@@ -36,7 +36,7 @@
 		    </form>
 		  </div>
 		</div>
-		<p class="text-center form-control mt-3 card-bg">Already have account? <a href="login.html">Login.</a></p>
+		<p class="text-center form-control mt-3 card-bg">Already have account? <a href="login.php">Login.</a></p>
 	</div>
 </div>
 <?php require_once 'inc/footer.php'; ?>

@@ -28,6 +28,11 @@
       </li>
     </ul>
 	<ul class="navbar-nav">
+      <?php if(isset($_SESSION['usr_login'])){ ?>
+      <li class="nav-item">
+        <a class="nav-link" href="logout.php">Logout</a>
+      </li>
+  <?php }else{ ?>
       <li class="nav-item">
         <a class="nav-link" href="login.php">Sing in</a>
       </li>
@@ -35,6 +40,6 @@
         <a class="nav-link" href="register.php">Register</a>
       </li>
     </ul>
-
+  <?php } ?>
   </div>
 </nav>

@@ -1,4 +1,19 @@
 <?php require_once 'inc/header.php'; ?>
+<?php require_once 'classes/class.user.php'; ?>
+<?php 
+	if (isset($_POST['login'])) {
+		extract($_POST);
+		$login = new Users();
+		$result = $login->login($username, $password);
+		
+		if ($result) {
+			echo "Login success";
+		}else{
+			echo "Login failed";
+		}
+	}
+
+ ?>
 <div class="row justify-content-md-center">
 	<div class="col-12 col-md-auto">
 		<h4 class="text-center mt-5">Login</h4>

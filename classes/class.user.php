@@ -28,17 +28,23 @@
 		* @return bool
 		*/
 		public function login($username, $password){
-			try {
-				// database query here.
-				$stmt = $this->_conn->prepare("SELECT * from `users` WHERE username = ? OR email = ? AND passwrod = ? ");
-				$stmt->execute(array($username,$passwrod));
-				if ($stmt->rowCount() > 0) {
-					return true;
+			if (!empty($username) && !empty($password)) {
+				try {
+					// database query here.
+					$stmt = $this->_conn->prepare("SELECT * from `users` WHERE username = ?  AND password = ? ");
+					$stmt->execute(array($username, sha1($password) ));
+					if ($stmt->rowCount() > 0) {
+						$_SESSION['usr_login'] = true;
+						return true;
+					}
+					return false;
+				} catch (PDOException $e) {
+					return $e->getMessage();
 				}
+			}else{
 				return false;
-			} catch (PDOException $e) {
-				return $e->getMessage();
 			}
+			
 		}
 
 		/**
