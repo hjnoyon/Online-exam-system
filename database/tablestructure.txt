@@ -1,0 +1,7 @@
+users:
+id			-	int(11) primary key
+fullname	-	varchar(250)
+email		- 	varchar(250) unique
+username	-	varchar(64) unique
+password	-	varchar(250) sha1
+timestamp	-	datetime
